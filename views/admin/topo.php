@@ -13,6 +13,7 @@
         <span class="logo">RetroBox</span>
         <nav>
             <a href="<?= BASE_URL ?>views/admin/painel.php">Painel</a>
+            <a href="<?= BASE_URL ?>views/admin/plataformas/index.php">Plataformas</a>
             <a href="<?= BASE_URL ?>controllers/LoginController.php?acao=sair">Sair</a>
         </nav>
     </header>

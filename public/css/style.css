@@ -129,3 +129,46 @@ button:hover,
     background: #e6f4ea;
     color: #1e6b3a;
 }
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #f0eee9;
+}
+
+.acoes a {
+    margin-right: 12px;
+}
+
+.acoes .excluir {
+    color: #a12f2f;
+}
+
+.form {
+    max-width: 480px;
+}
+
+.voltar {
+    margin-left: 12px;
+    color: #666;
+}
