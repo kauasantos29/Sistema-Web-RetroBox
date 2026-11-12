@@ -66,9 +66,10 @@ Tabelas: `usuarios`, `clientes`, `plataformas`, `jogos`, `pedidos` e `itens_pedi
 
 | Tipo | E-mail | Senha |
 |---|---|---|
-| Administrador | admin@retrobox.com | admin123 |
-| Cliente | ana@email.com | cliente123 |
-| Cliente | bruno@email.com | cliente123 |
+| Administrador | kauasantos29.kss@gmail.com | adm123 |
+| Cliente | matheusfernando@gmail.com | user123 |
+| Cliente | juliocesar@gmail.com | user123 |
+| Cliente | vitorbotelho@gmail.com | user123 |
 
 ## Funcionalidades
 

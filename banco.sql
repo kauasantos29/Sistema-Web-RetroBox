@@ -79,14 +79,17 @@ CREATE TABLE itens_pedido (
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
--- Dados de usuarios e clientes
+-- Dados de teste
+-- admin: kauasantos29.kss@gmail.com / adm123
+-- clientes: user123
 
 INSERT INTO usuarios (nome, email, senha, tipo) VALUES
-('Kauã Santos Soares', 'admin@retrobox.com', '$2y$10$pIhCZzHsBoxLUz7gx80rN.WE6fn.4m6Fyq0re5v7ZdPKUx2k96me.', 'admin');
+('Kauã Santos Soares', 'kauasantos29.kss@gmail.com', '$2y$10$N9GXIJBMsPZ12wqREnWlqexMf9Qz37a9isqHr9sa9svvgNI4QB3US', 'admin');
 
 INSERT INTO clientes (nome, email, telefone, senha) VALUES
-('Ana Souza', 'ana@email.com', '(11) 98888-1111', '$2y$10$M.V/H5fwdrL6av5EDix1Tu5kCwHCUtmTUW3mX/EiaCrKt3OYyQTUi'),
-('Bruno Lima', 'bruno@email.com', '(21) 97777-2222', '$2y$10$M.V/H5fwdrL6av5EDix1Tu5kCwHCUtmTUW3mX/EiaCrKt3OYyQTUi');
+('Matheus Fernando', 'matheusfernando@gmail.com', '(38) 99454-1155', '$2y$10$QKwu.mWmNQVSwN3YDrMPXeP1xlFs73rdLAXB2YZZ3wQdtCH2XAJGy'),
+('Júlio Cesar', 'juliocesar@gmail.com', '(38) 99454-1256', '$2y$10$QKwu.mWmNQVSwN3YDrMPXeP1xlFs73rdLAXB2YZZ3wQdtCH2XAJGy'),
+('Vitor Botelho', 'vitorbotelho@gmail.com', '(38) 99454-1357', '$2y$10$QKwu.mWmNQVSwN3YDrMPXeP1xlFs73rdLAXB2YZZ3wQdtCH2XAJGy');
 
 INSERT INTO plataformas (nome, fabricante) VALUES
 ('Super Nintendo', 'Nintendo'),

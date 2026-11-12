@@ -1,0 +1,19 @@
+Login de Usuário
+-- admin: kauasantos29.kss@gmail.com
+adm123
+
+
+
+
+
+Login de Cliente
+-- clientes: Matheus Fernando, matheusfernando@gmail.com; Vitor Botelho, vitorbotelho@gmail.com; Júlio Cesar, juliocesar@gmail.com;
+user123
+
+
+
+
+
+
+Comando de commit no github
+git add . ; git commit -m "Atualização" ; git push
