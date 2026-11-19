@@ -87,6 +87,11 @@ class Cliente
         return $sql->fetchColumn() > 0;
     }
 
+    public function contar()
+    {
+        return $this->pdo->query('SELECT COUNT(*) FROM clientes')->fetchColumn();
+    }
+
     public function autenticar($email, $senha)
     {
         $sql = $this->pdo->prepare('SELECT * FROM clientes WHERE email = :email');

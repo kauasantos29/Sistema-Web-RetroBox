@@ -102,6 +102,35 @@ class Jogo
         return $sql->execute();
     }
 
+    public function baixarEstoque($qtd)
+    {
+        $sql = $this->pdo->prepare('UPDATE jogos SET estoque = estoque - :qtd WHERE id = :id AND estoque >= :minimo');
+        $sql->bindValue(':qtd', $qtd, PDO::PARAM_INT);
+        $sql->bindValue(':minimo', $qtd, PDO::PARAM_INT);
+        $sql->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $sql->execute();
+        return $sql->rowCount() > 0;
+    }
+
+    public function devolverEstoque($qtd)
+    {
+        $sql = $this->pdo->prepare('UPDATE jogos SET estoque = estoque + :qtd WHERE id = :id');
+        $sql->bindValue(':qtd', $qtd, PDO::PARAM_INT);
+        $sql->bindValue(':id', $this->id, PDO::PARAM_INT);
+        return $sql->execute();
+    }
+
+    public function contar()
+    {
+        return $this->pdo->query('SELECT COUNT(*) FROM jogos')->fetchColumn();
+    }
+
+    public function estoqueBaixo()
+    {
+        $sql = $this->pdo->query('SELECT id, titulo, estoque FROM jogos WHERE estoque <= 1 ORDER BY estoque, titulo');
+        return $sql->fetchAll();
+    }
+
     public function foiVendido($id)
     {
         $sql = $this->pdo->prepare('SELECT COUNT(*) FROM itens_pedido WHERE jogo_id = :id');

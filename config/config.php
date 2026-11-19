@@ -18,3 +18,23 @@ function exigirLogin()
         exit;
     }
 }
+
+function clienteLogado()
+{
+    return isset($_SESSION['cliente_id']);
+}
+
+function ehAdmin()
+{
+    return usuarioLogado() && $_SESSION['usuario_tipo'] === 'admin';
+}
+
+function exigirAdmin()
+{
+    exigirLogin();
+
+    if (!ehAdmin()) {
+        header('Location: ' . BASE_URL . 'views/admin/painel.php');
+        exit;
+    }
+}

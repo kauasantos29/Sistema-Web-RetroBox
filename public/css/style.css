@@ -278,7 +278,7 @@ a.logo:hover {
 .card .sem-foto {
     width: 100%;
     height: 180px;
-    object-fit: cover;
+    object-fit: contain;
     background: #e9e6df;
 }
 
@@ -330,4 +330,238 @@ a.logo:hover {
     padding: 30px;
     color: #888;
     font-size: 13px;
+}
+
+a.card {
+    color: inherit;
+    display: block;
+}
+
+a.card:hover {
+    text-decoration: none;
+    border-color: #c0392b;
+}
+
+.voltar-loja {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.detalhes {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.detalhes .foto {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.detalhes .foto img,
+.detalhes .sem-foto {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.detalhes .caixa {
+    flex: 1;
+}
+
+.detalhes h1 {
+    margin: 4px 0 16px;
+    font-size: 26px;
+}
+
+.detalhes .plataforma {
+    color: #c0392b;
+    font-size: 14px;
+}
+
+.detalhes .preco {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+.ficha {
+    border: none;
+    margin-bottom: 10px;
+}
+
+.ficha th {
+    background: none;
+    width: 130px;
+    color: #777;
+    font-weight: normal;
+}
+
+.comprar,
+.qtd {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.comprar input,
+.qtd input {
+    width: 70px;
+    margin-bottom: 0;
+}
+
+button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+.btn-link {
+    background: none;
+    padding: 0;
+    color: #c0392b;
+}
+
+.btn-link:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.btn-link.excluir {
+    color: #a12f2f;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 14px 12px;
+    font-size: 18px;
+}
+
+.finalizar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pedido {
+    margin-bottom: 15px;
+}
+
+.pedido .barra {
+    margin-bottom: 4px;
+}
+
+.status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    background: #eee;
+    color: #555;
+}
+
+.status.pendente {
+    background: #fff4d6;
+    color: #8a6100;
+}
+
+.status.pago {
+    background: #e3eefc;
+    color: #24529b;
+}
+
+.status.enviado {
+    background: #efe6fa;
+    color: #6b3fa0;
+}
+
+.status.entregue {
+    background: #e6f4ea;
+    color: #1e6b3a;
+}
+
+.status.cancelado {
+    background: #fbe9e9;
+    color: #a12f2f;
+}
+
+.caixa table {
+    margin: 10px 0 15px;
+}
+
+.status-form label {
+    margin: 0;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.resumo span {
+    display: block;
+    color: #777;
+    font-size: 14px;
+}
+
+.resumo strong {
+    display: block;
+    font-size: 26px;
+    margin-top: 6px;
+}
+
+.painel-colunas {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.painel-colunas h3 {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+@media (max-width: 760px) {
+    .detalhes,
+    .linha {
+        flex-direction: column;
+    }
+
+    .detalhes .foto,
+    .detalhes .caixa {
+        width: 100%;
+    }
+
+    .painel-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topo nav a {
+        margin: 0 8px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }

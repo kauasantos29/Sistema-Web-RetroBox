@@ -6,7 +6,7 @@ require_once __DIR__ . '/../models/Usuario.php';
 $acao = $_GET['acao'] ?? '';
 
 if ($acao === 'sair') {
-    session_destroy();
+    unset($_SESSION['usuario_id'], $_SESSION['usuario_nome'], $_SESSION['usuario_tipo']);
     header('Location: ' . BASE_URL . 'views/login.php');
     exit;
 }

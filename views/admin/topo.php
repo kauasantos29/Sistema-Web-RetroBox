@@ -16,6 +16,10 @@
             <a href="<?= BASE_URL ?>views/admin/plataformas/index.php">Plataformas</a>
             <a href="<?= BASE_URL ?>views/admin/jogos/index.php">Jogos</a>
             <a href="<?= BASE_URL ?>views/admin/clientes/index.php">Clientes</a>
+            <a href="<?= BASE_URL ?>views/admin/pedidos/index.php">Pedidos</a>
+            <?php if (ehAdmin()): ?>
+                <a href="<?= BASE_URL ?>views/admin/usuarios/index.php">Usuários</a>
+            <?php endif; ?>
             <a href="<?= BASE_URL ?>controllers/LoginController.php?acao=sair">Sair</a>
         </nav>
     </header>

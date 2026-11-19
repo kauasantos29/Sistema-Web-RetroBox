@@ -43,7 +43,7 @@ require __DIR__ . '/topo.php';
     <?php if ($jogos): ?>
         <div class="grade">
             <?php foreach ($jogos as $j): ?>
-                <div class="card">
+                <a class="card" href="<?= BASE_URL ?>views/loja/jogo.php?id=<?= $j['id'] ?>">
                     <?php if ($j['imagem']): ?>
                         <img src="<?= BASE_URL ?>public/img/jogos/<?= htmlspecialchars($j['imagem']) ?>" alt="<?= htmlspecialchars($j['titulo']) ?>">
                     <?php else: ?>
@@ -63,7 +63,7 @@ require __DIR__ . '/topo.php';
                             <span class="estoque esgotado">Esgotado</span>
                         <?php endif; ?>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     <?php else: ?>
